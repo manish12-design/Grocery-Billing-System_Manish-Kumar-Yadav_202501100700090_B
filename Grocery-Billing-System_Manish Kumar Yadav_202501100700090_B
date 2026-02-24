@@ -1,0 +1,34 @@
+#Grocery-Billing-System_Manish Kumar Yadav_202501100700090_B
+# Grocery Store Billing System
+# This program calculates total bill amount,
+# applies discount if applicable, and shows final payable amount.
+
+# initialize total amount
+total = 0
+
+# Loop to take input for 5 items
+for i in range(1, 6):
+    print("\nItem", i)
+    
+    # Taking price and quantity input
+    price = float(input("Enter price of item: "))
+    quantity = int(input("Enter number of units: "))
+    
+    # Add cost of current item to total
+    total += price * quantity
+
+# Display original total
+print("\nOriginal Total Amount = Rs.", total)
+
+# Apply discount if total exceeds Rs.100
+if total > 100:
+    discount = total * 0.10   # 10% discount
+else:
+    discount = 0
+
+# Final payable amount
+final_amount = total - discount
+
+# Display discount and final amount
+print("Discount = Rs.", discount)
+print("Final Payable Amount = Rs.", final_amount)
